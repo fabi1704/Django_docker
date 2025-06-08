@@ -24,11 +24,14 @@ DEBUG = os.getenv('DEBUG') == 'False'
 #ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "djangodocker-production.up.railway.app").split(",")
 
-CSRF_TRUSTED_ORIGINS = [
-    f"https://{host}"
-    for host in ALLOWED_HOSTS
-    if host not in ("localhost", "127.0.0.1")
-]
+#CSRF_TRUSTED_ORIGINS = [
+#    f"https://{host}"
+#    for host in ALLOWED_HOSTS
+#    if host not in ("localhost", "127.0.0.1")
+#]
+
+CSRF_TRUSTED_ORIGINS = ["https://djangodocker-production.up.railway.app", "https://127.0.0.1:8000"]
+
 
 # Application definition
 
